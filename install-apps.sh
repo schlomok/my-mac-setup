@@ -89,6 +89,7 @@ install_brew_apps() {
   # Browsers
   brew cask install firefox;
   brew cask install google-chrome;
+  brew cask install opera;
 
   # Gaming
   brew cask install battle-net;
