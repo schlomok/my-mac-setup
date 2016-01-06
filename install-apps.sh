@@ -49,6 +49,7 @@ install_brew_apps() {
   brew install      cmake;
   brew cask install dropbox;
   brew cask install flux;
+  brew cask install geektool; # todo: include automatic geektool items
   brew cask install notational-velocity;
   brew cask install spectacle;
   brew cask install spotify;
