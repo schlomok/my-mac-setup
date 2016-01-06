@@ -7,7 +7,7 @@ CURRENT_DIR="$(pwd)"
 install() {
   echo "Installing [$PROJECT_NAME] by $PROJECT_AUTHOR..."
   echo "Directory: $CURRENT_DIR" 
-  ./install-apps.sh 
+  sh -c "$(curl https://raw.githubusercontent.com/schlomok/my-mac-setup/master/install-apps.sh)"
   exit 0
 }
 
