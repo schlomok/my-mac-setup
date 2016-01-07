@@ -43,13 +43,14 @@ install_brew_apps() {
   brew install pianobar; # todo: include how to set credentials
 
   brew cask install bartender;
+  brew cask install bowtie;
   brew cask install caffeine;
   brew cask install cakebrew;
   brew cask install cheatsheet;
   brew install      cmake;
   brew cask install dropbox;
   brew cask install flux;
-  brew cask install geektool; # todo: include automatic geektool items
+  brew cask install geektool; # todo: include automatic geeklets
   brew cask install notational-velocity;
   brew cask install spectacle;
   brew cask install spotify;
@@ -130,12 +131,6 @@ install_java() {
   brew cask install java;
 
   # Need to figure out a way to better automate this
-
-  # brew install jenv;
-  # echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc;
-  # echo 'eval "$(jenv init -)"' >> ~/.zshrc;
-  # source ~/.zshrc;
-  # jenv add /Library/Java/JavaVirtualMachines/*/Contents/Home;
 }
 
 install_rvm() {
