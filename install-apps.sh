@@ -111,6 +111,7 @@ install_brew_apps() {
 
   gem install lolcat;
 
+  brew linkapps;
   brew doctor;
   brew cleanup;
 
@@ -118,7 +119,7 @@ install_brew_apps() {
 }
 
 install_vim() {
-  brew cask install macvim --with-override-system-vim; 
+  brew install macvim --with-override-system-vim;
   # todo: install my .vimrc here
 }
 
