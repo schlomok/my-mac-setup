@@ -36,6 +36,7 @@ install_brew_apps() {
   brew install      git;
   brew install      gradle;
   brew cask install menumeters;
+  brew install      mono;
   brew install      node;
   brew cask install path-finder;
   brew install      p7zip;
