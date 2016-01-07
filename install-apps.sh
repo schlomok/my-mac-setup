@@ -23,6 +23,7 @@ install_brew_apps() {
 
   # General utilities
   brew install      ack;
+  brew install      android-sdk;
   brew install      coreutils;
   brew install      cowsay;
   brew install      ctags;
