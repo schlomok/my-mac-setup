@@ -5,6 +5,7 @@ CURRENT_DIR="$(pwd)"
 install_apps() {
   install_homebrew
   install_rvm
+  install_fonts
 }
 
 install_homebrew() {
@@ -76,7 +77,7 @@ install_brew_apps() {
   brew install      colordiff;
   brew cask install diffmerge;
   brew cask install github-desktop;
-  brew cask install iterm2;
+  brew cask install iterm2; # todo: automate my iTerm 2 setup (guake)
   brew cask install packer;
   brew cask install pandoc;
   brew cask install sourcetree;
@@ -134,6 +135,13 @@ install_java() {
   brew cask install java;
 
   # Need to figure out a way to better automate this
+}
+
+install_fonts() {
+  brew tap caskroom/fonts;
+  brew cask install font-source-code-pro;
+  
+  # todo: set this as the default font for iterm2
 }
 
 install_rvm() {
