@@ -137,6 +137,7 @@ install_tmux() {
 
 install_java() {
   brew cask install java;
+  brew cask install eclipse-java;
 
   # Need to figure out a way to better automate this
 }
