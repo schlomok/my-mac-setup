@@ -3,8 +3,9 @@
 CURRENT_DIR="$(pwd)"
 
 install_apps() {
-  install_homebrew
-  install_rvm
+  xcode-select --install;
+  install_homebrew;
+  install_rvm;
   install_fonts
 }
 
