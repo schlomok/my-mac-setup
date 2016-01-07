@@ -5,7 +5,6 @@ CURRENT_DIR="$(pwd)"
 install_apps() {
   xcode-select --install;
   install_homebrew;
-  install_rvm;
   install_fonts
 }
 
@@ -90,6 +89,8 @@ install_brew_apps() {
 
   # Languages
   install_java;
+  install_rvm;
+  brew install      go;
   brew install      python;
   brew install      python3;
 
