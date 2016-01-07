@@ -66,6 +66,7 @@ install_brew_apps() {
   # Development
 
   ## Editors
+  brew cask install android-studio;
   brew cask install atom;
   brew cask install brackets;
   brew cask install eclipse-ide;
