@@ -33,7 +33,8 @@ install_brew_apps() {
   brew install      findutils;
   brew install      ffmpeg;
   brew install      fortune;
-  brew install      git; 
+  brew install      git;
+  brew install      gradle;
   brew cask install menumeters;
   brew install      node;
   brew cask install path-finder;
