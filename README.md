@@ -4,9 +4,7 @@
 
 Run the following commands to install the complete setup.
 
-    git clone https://github.com/schlomok/my-mac-setup.git my-mac-setup
-    cd my-mac-setup
-    sh ./install.sh
+    sh -c "$(curl https://raw.githubusercontent.com/schlomok/my-mac-setup/master/install.sh)"
 
 ### What's In It
 
