@@ -136,6 +136,7 @@ install_java() {
 install_rvm() {
   echo "Installing RVM (along with latest ruby and rails)"
   curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
+  # todo: Include my .gemrc file
 }
 
 install_apps
