@@ -16,11 +16,15 @@ install_brew_apps() {
   echo "Installing relevant homebrew apps"
   brew update;
   brew install caskroom/cask/brew-cask; 
+  
+  # Fetch apps that require a password early
+  brew cask fetch   pandoc;
 
   # General utilities
   brew install      ack;
   brew install      coreutils;
   brew install      cowsay;
+  brew install      ctags;
   brew install      curl;
   brew cask install dash;
   brew cask install doxygen;
@@ -74,7 +78,6 @@ install_brew_apps() {
   brew cask install github-desktop;
   brew cask install iterm2;
   brew cask install packer;
-  brew cask fetch   pandoc;
   brew cask install pandoc;
   brew cask install sourcetree;
   brew cask install virtualbox;
