@@ -66,6 +66,7 @@ install_brew_apps() {
 
   ## Editors
   brew cask install atom;
+  brew cask install brackets;
   brew cask install eclipse-ide;
   brew cask install eclipse-platform;
   brew cask install emacs;
