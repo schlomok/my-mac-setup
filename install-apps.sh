@@ -41,6 +41,7 @@ install_brew_apps() {
   brew cask install path-finder;
   brew install      p7zip;
   brew cask install the-unarchiver
+  brew install      tldr-pages/tldr/tldr;
   brew install      tree;
   brew install      wget;
 
