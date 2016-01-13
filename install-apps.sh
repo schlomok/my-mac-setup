@@ -61,6 +61,7 @@ install_brew_apps() {
   brew cask install flux;
   brew cask install geektool; # todo: include automatic geeklets
   brew cask install notational-velocity;
+  brew cask install nylas-n1;
   brew cask install spectacle;
   brew cask install spotify;
   brew cask install textexpander;
