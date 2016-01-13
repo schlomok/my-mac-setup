@@ -81,7 +81,7 @@ install_brew_apps() {
   brew cask install eclipse-ide;
   brew cask install eclipse-platform;
   brew cask install emacs;
-  brew cask install intellij-idea-ce;
+  brew cask install intellij-idea;
   brew cask install sublime-text;
   brew cask install visual-studio-code;
   install_vim;
