@@ -33,7 +33,6 @@ install_brew_apps() {
   brew cask install doxygen;
   brew install      findutils;
   brew install      ffmpeg;
-  brew install      fortune;
   brew install      git;
   brew install      gradle;
   brew cask install menumeters;
