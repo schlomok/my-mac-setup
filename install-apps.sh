@@ -122,7 +122,9 @@ install_brew_apps() {
 
 install_vim() {
   brew install macvim --with-override-system-vim;
-  # todo: install my .vimrc here
+
+  ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vi;
+  ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vim
 }
 
 install_zsh() {
@@ -132,21 +134,15 @@ install_zsh() {
   # Install oh-my-zsh
   curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh;
   chsh -s /bin/zsh;
-
-  # todo: install my .zshrc here
 }
 
 install_tmux() {
   brew install tmux;
-
-  # todo: install my tmux config here
 }
 
 install_java() {
   brew cask install java;
   brew cask install eclipse-java;
-
-  # Need to figure out a way to better automate this
 }
 
 install_fonts() {
@@ -159,7 +155,6 @@ install_fonts() {
 install_rvm() {
   echo "Installing RVM (along with latest ruby and rails)"
   curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
-  # todo: Include my .gemrc file
 }
 
 install_apps
