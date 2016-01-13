@@ -5,7 +5,6 @@ CURRENT_DIR="$(pwd)"
 install_apps() {
   xcode-select --install;
   install_homebrew;
-  install_fonts
 }
 
 install_homebrew() {
@@ -15,10 +14,11 @@ install_homebrew() {
 }
 
 install_brew_apps() {
-  echo "Installing relevant homebrew apps"
+  echo "Installing Homebrew apps"
   brew update;
-  brew install caskroom/cask/brew-cask;
   brew upgrade;
+  brew install      caskroom/cask/brew-cask;
+  brew tap          homebrew/dupes;
   
   # Fetch apps that require a password early
   brew cask fetch   pandoc;
@@ -27,6 +27,7 @@ install_brew_apps() {
   brew install      ack;
   brew install      android-sdk;
   brew install      coreutils;
+  brew install      cmake;
   brew install      ctags;
   brew install      curl;
   brew cask install dash;
@@ -44,28 +45,32 @@ install_brew_apps() {
   brew install      tldr-pages/tldr/tldr;
   brew install      tree;
   brew install      wget;
-
-  brew tap homebrew/dupes;
   brew install      homebrew/dupes/grep;
 
   # Preferred utilities
-  brew install pianobar; # todo: include how to set credentials
-
   brew cask install bartender;
   brew cask install bowtie;
   brew cask install caffeine;
   brew cask install cakebrew;
   brew cask install cheatsheet;
-  brew install      cmake;
   brew cask install dropbox;
   brew cask install flux;
   brew cask install geektool; # todo: include automatic geeklets
   brew cask install notational-velocity;
   brew cask install nylas-n1;
+  brew install      pianobar; # todo: include how to set credentials
   brew cask install spectacle;
   brew cask install spotify;
-  brew cask install textexpander;
   brew cask install vlc;
+  
+  # Browsers
+  brew cask install firefox;
+  brew cask install google-chrome;
+  brew cask install opera;
+
+  # Gaming
+  brew cask install battle-net;
+  brew cask install steam;
   
   # Development
 
@@ -89,36 +94,32 @@ install_brew_apps() {
   brew cask install packer;
   brew cask install pandoc;
   brew cask install sourcetree;
+  install_tmux;
   brew cask install virtualbox;
   brew cask install vagrant;
   brew cask install vagrant-manager;
+  brew cask install vmware-fusion;
   install_zsh;
-  install_tmux;
 
   # Languages
-  install_java;
-  install_rvm;
   brew install      go;
+  install_java;
   brew install      python;
   brew install      python3;
+  install_rvm;
 
-  # Browsers
-  brew cask install firefox;
-  brew cask install google-chrome;
-  brew cask install opera;
-
-  # Gaming
-  brew cask install battle-net;
-  brew cask install steam;
-
-  # Entertaining, but unncessary
+  # Miscellaneous
   brew install      cmatrix;
   brew install      cowsay;
   brew install      figlet;
+  install_fonts;
+  gem install       lolcat;
 
-  gem install lolcat;
-
+  # Cleanup
+  
   brew linkapps;
+  brew update;
+  brew upgrade;
   brew doctor;
   brew cleanup;
 
@@ -138,7 +139,10 @@ install_zsh() {
 
   # Install oh-my-zsh
   curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh;
-  chsh -s /bin/zsh;
+  
+  # Set zsh as default shell
+  command -v zsh | sudo tee -a /etc/shells;
+  sudo chsh -s "$(command -v zsh)" "${USER}"
 }
 
 install_tmux() {
