@@ -131,8 +131,13 @@ install_brew_apps() {
 install_vim() {
   brew install macvim --with-override-system-vim;
 
-  ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vi;
-  ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vim
+  if [ ! -L /usr/local/bin/vi ]; then 
+    ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vi;
+  fi
+  
+  if [ ! -L /usr/local/bin/vim ]; then
+    ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vim
+  fi
 }
 
 install_zsh() {
