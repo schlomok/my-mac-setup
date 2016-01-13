@@ -107,12 +107,14 @@ install_brew_apps() {
   brew install      python;
   brew install      python3;
   install_rvm;
+  
+  # Fonts
+  install_fonts;
 
   # Miscellaneous
   brew install      cmatrix;
   brew install      cowsay;
   brew install      figlet;
-  install_fonts;
   gem install       lolcat;
 
   # Cleanup
