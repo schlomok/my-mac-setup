@@ -10,13 +10,15 @@ install_apps() {
 
 install_homebrew() {
   echo "Installing homebrew" 
-  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; install_brew_apps
+  ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; 
+  install_brew_apps
 }
 
 install_brew_apps() {
   echo "Installing relevant homebrew apps"
   brew update;
-  brew install caskroom/cask/brew-cask; 
+  brew install caskroom/cask/brew-cask;
+  brew upgrade;
   
   # Fetch apps that require a password early
   brew cask fetch   pandoc;
@@ -25,7 +27,6 @@ install_brew_apps() {
   brew install      ack;
   brew install      android-sdk;
   brew install      coreutils;
-  brew install      cowsay;
   brew install      ctags;
   brew install      curl;
   brew cask install dash;
@@ -111,13 +112,18 @@ install_brew_apps() {
   brew cask install battle-net;
   brew cask install steam;
 
+  # Entertaining, but unncessary
+  brew install      cmatrix;
+  brew install      cowsay;
+  brew install      figlet;
+
   gem install lolcat;
 
   brew linkapps;
   brew doctor;
   brew cleanup;
 
-  cowsay EPIC INSTALL $USER! | lolcat
+  cowsay -f elephant EPIC INSTALL $USER! | lolcat
 }
 
 install_vim() {
