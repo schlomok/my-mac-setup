@@ -131,11 +131,11 @@ install_brew_apps() {
 install_vim() {
   brew install macvim --with-override-system-vim;
 
-  if [ ! -L /usr/local/bin/vi ]; then 
+  if [ ! -f /usr/local/bin/vi ]; then 
     ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vi;
   fi
   
-  if [ ! -L /usr/local/bin/vim ]; then
+  if [ ! -f /usr/local/bin/vim ]; then
     ln -s /usr/local/Cellar/macvim/*/bin/vim /usr/local/bin/vim
   fi
 }
