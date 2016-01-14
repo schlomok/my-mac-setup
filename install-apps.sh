@@ -79,6 +79,7 @@ install_brew_apps() {
   brew cask install atom;
   brew cask install brackets;
   brew cask install eclipse-ide;
+  brew cask install eclipse-java;
   brew cask install eclipse-platform;
   brew cask install emacs;
   brew cask install intellij-idea;
@@ -94,7 +95,6 @@ install_brew_apps() {
   brew cask install packer;
   brew cask install pandoc;
   brew cask install sourcetree;
-  install_tmux;
   brew cask install virtualbox;
   brew cask install vagrant;
   brew cask install vagrant-manager;
@@ -103,19 +103,24 @@ install_brew_apps() {
 
   # Languages
   brew install      go;
-  install_java;
+  brew cask install java;
   brew install      python;
   brew install      python3;
   install_rvm;
   
   # Fonts
-  install_fonts;
+  brew tap caskroom/fonts;
+  brew cask install font-source-code-pro;
 
   # Miscellaneous
   brew install      cmatrix;
   brew install      cowsay;
   brew install      figlet;
   gem install       lolcat;
+
+  # Exceptions
+  brew install      tmux;
+  gem install       tmuxinator;
 
   # Cleanup
   
@@ -152,24 +157,7 @@ install_zsh() {
   sudo chsh -s "$(command -v zsh)" "${USER}"
 }
 
-install_tmux() {
-  brew install tmux;
-}
-
-install_java() {
-  brew cask install java;
-  brew cask install eclipse-java;
-}
-
-install_fonts() {
-  brew tap caskroom/fonts;
-  brew cask install font-source-code-pro;
-  
-  # todo: set this as the default font for iterm2
-}
-
 install_rvm() {
-  echo "Installing RVM (along with latest ruby and rails)"
   curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
 }
 
