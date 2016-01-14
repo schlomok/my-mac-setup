@@ -63,6 +63,7 @@ Without further ado, here is the list:
 * Dropbox
 * Flux
 * Geektool
+* [GitBook](https://www.gitbook.com/)
 * Notational Velocity
 * Nylas N1
 * Pianobar
@@ -110,6 +111,7 @@ Without further ado, here is the list:
 * SourceTree
 * Tmux
   - My Tmux setup is included in my dotfiles.
+* Tmuxinator
 * VirtualBox
   - I actually prefer [VMware Fusion](https://www.vmware.com/products/fusion), but I just include VirtualBox because it is free and 
     suits most basic needs for a VM.

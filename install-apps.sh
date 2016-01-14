@@ -56,6 +56,7 @@ install_brew_apps() {
   brew cask install dropbox;
   brew cask install flux;
   brew cask install geektool; # todo: include automatic geeklets
+  npm install       gitbook-cli -g
   brew cask install notational-velocity;
   brew cask install nylas-n1;
   brew install      pianobar; # todo: include how to set credentials
