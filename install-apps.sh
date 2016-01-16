@@ -26,6 +26,7 @@ install_brew_apps() {
   # General utilities
   brew install      ack;
   brew install      android-sdk;
+  brew install      cabal-install;
   brew install      coreutils;
   brew install      cmake;
   brew install      ctags;
@@ -34,6 +35,7 @@ install_brew_apps() {
   brew cask install doxygen;
   brew install      findutils;
   brew install      ffmpeg;
+  brew install      ghc;
   brew install      git;
   brew install      gradle;
   brew cask install menumeters;
@@ -56,7 +58,7 @@ install_brew_apps() {
   brew cask install dropbox;
   brew cask install flux;
   brew cask install geektool; # todo: include automatic geeklets
-  npm install       gitbook-cli -g
+  npm install       gitbook-cli -g;
   brew cask install notational-velocity;
   brew cask install nylas-n1;
   brew install      pianobar; # todo: include how to set credentials

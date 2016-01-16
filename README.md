@@ -32,6 +32,7 @@ Without further ado, here is the list:
 
 * [Ack](http://beyondgrep.com/)
 * [Android SDK](http://developer.android.com/sdk/index.html)
+* cabal-install
 * [GNU core utilities](http://www.gnu.org/software/coreutils/coreutils.html)
 * [CMake](https://cmake.org/)
 * [Ctags](https://en.wikipedia.org/wiki/Ctags)
@@ -40,6 +41,7 @@ Without further ado, here is the list:
 * doxygen
 * findutils
 * ffmpeg
+* ghc
 * git
 * gradle
 * grep
