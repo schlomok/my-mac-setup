@@ -36,7 +36,7 @@ install_brew_apps() {
   brew install      findutils;
   brew install      ffmpeg;
   brew install      ghc;
-  brew install      git;
+  brew install      gnu-sed --with-default-names;
   brew install      gradle;
   brew cask install menumeters;
   brew install      mono;
@@ -91,8 +91,7 @@ install_brew_apps() {
   install_vim;
 
   ## Tools
-  brew install      colordiff;
-  brew cask install diffmerge;
+  install_git;
   brew cask install github-desktop;
   brew cask install iterm2; # todo: automate my iTerm 2 setup (guake)
   brew cask install packer;
@@ -134,6 +133,19 @@ install_brew_apps() {
   brew cleanup;
 
   cowsay -f elephant EPIC INSTALL $USER! | lolcat
+}
+
+install_git() {
+  brew install      git;
+  brew install      colordiff;
+  brew cask install diffmerge;
+  npm install -g    diff-so-fancy;
+
+  git config --global color.diff-highlight.oldNormal "red bold";
+  git config --global color.diff-highlight.oldHighlight "red bold 52";
+  git config --global color.diff-highlight.newNormal "green bold";
+  git config --global color.diff-highlight.newHighlight "green bold 22";
+  git config --global core.pager "diff-highlight | diff-so-fancy | less --tabs=1,5 -R";
 }
 
 install_vim() {

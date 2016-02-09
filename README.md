@@ -43,6 +43,7 @@ Without further ado, here is the list:
 * ffmpeg
 * ghc
 * git
+* [diff-so-fancy](https://github.com/stevemao/diff-so-fancy)
 * gradle
 * grep
 * menumeters
