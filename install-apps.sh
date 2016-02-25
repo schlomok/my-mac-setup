@@ -45,21 +45,16 @@ install_brew_apps() {
   brew install      p7zip;
   brew cask install the-unarchiver
   brew install      tldr-pages/tldr/tldr;
-  brew install      tree;
   brew install      wget;
   brew install      homebrew/dupes/grep;
 
   # Preferred utilities
-  brew cask install bartender;
-  brew cask install bowtie;
   brew cask install caffeine;
   brew cask install cakebrew;
   brew cask install cheatsheet;
   brew cask install dropbox;
   brew cask install flux;
-  brew cask install geektool; # todo: include automatic geeklets
-  npm install       gitbook-cli -g;
-  brew cask install notational-velocity;
+  brew cask install marked;
   brew cask install nylas-n1;
   brew install      pianobar; # todo: include how to set credentials
   brew cask install spectacle;
@@ -80,7 +75,6 @@ install_brew_apps() {
   ## Editors
   brew cask install android-studio;
   brew cask install atom;
-  brew cask install brackets;
   brew cask install eclipse-ide;
   brew cask install eclipse-java;
   brew cask install eclipse-platform;
@@ -92,13 +86,10 @@ install_brew_apps() {
 
   ## Tools
   install_git;
-  brew cask install github-desktop;
   brew cask install iterm2; # todo: automate my iTerm 2 setup (guake)
   brew cask install packer;
   brew cask install pandoc;
   brew cask install sourcetree;
-  brew cask install virtualbox;
-  brew cask install vagrant;
   brew cask install vagrant-manager;
   brew cask install vmware-fusion;
   install_zsh;
