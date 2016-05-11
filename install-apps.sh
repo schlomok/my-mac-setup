@@ -19,6 +19,7 @@ install_brew_apps() {
   brew upgrade;
   brew install      caskroom/cask/brew-cask;
   brew tap          homebrew/dupes;
+  brew tap          caskroom/versions;
   
   # Fetch apps that require a password early
   brew cask fetch   pandoc;
@@ -79,7 +80,7 @@ install_brew_apps() {
   brew cask install eclipse-java;
   brew cask install eclipse-platform;
   brew cask install emacs;
-  brew cask install intellij-idea;
+  brew cask install intellij-idea-ce;
   brew cask install sublime-text;
   brew cask install visual-studio-code;
   install_vim;
